@@ -1,0 +1,94 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  padding: 20px;
+  height: 100px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.file-list {
+  display: grid;
+  gap: 20px;
+}
+
+.file-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: rgb(169, 161, 161) solid 1px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+.file-info-name {
+  display: flex;
+  justify-content: space-between;
+  
+  flex-direction: column;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #6200ea;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Delete button styling */
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #ff0000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .upload-section {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-section {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
